@@ -69,7 +69,7 @@ public class Main
             {
                 case "create":
 
-                    if (db.get(command[1]) != null)
+                    if (command.length < 3 || db.get(command[1]) != null)
                         System.out.println("false\n");
                     else
                     {
@@ -82,6 +82,11 @@ public class Main
 
                 case "fetch":
 
+                    if (command.length < 2)
+                    {
+                        System.out.println("false\n");
+                        break;
+                    }
                     String value = db.get(command[1]);
                     System.out.println((value != null ? "true\n"+value: "false") + "\n");
 
@@ -90,7 +95,7 @@ public class Main
 
                 case "update":
 
-                    if (db.get(command[1]) == null)
+                    if (command.length < 3 || db.get(command[1]) == null)
                         System.out.println("false\n");
                     else
                     {
@@ -102,7 +107,7 @@ public class Main
 
                 case "delete":
 
-                    if (db.get(command[1]) == null)
+                    if (command.length < 2 || db.get(command[1]) == null)
                         System.out.println("false\n");
                     else
                     {
