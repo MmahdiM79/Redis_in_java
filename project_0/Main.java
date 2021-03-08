@@ -79,8 +79,12 @@ public class Main
 
                 break;
 
-                
+
                 case "fetch":
+
+                    String value = db.get(command[1]);
+                    System.out.println((value != null ? "true\n"+value: "false") + "\n");
+
                 break;
 
                 case "update":
