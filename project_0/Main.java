@@ -67,7 +67,20 @@ public class Main
 
             switch (command[0])
             {
-                
+                case "create":
+                break;
+
+                case "fetch":
+                break;
+
+                case "update":
+                break;
+
+                case "delete":
+                break;
+
+                default:
+                    System.out.println("\nundefined command!\n");
             }
         }
     }
