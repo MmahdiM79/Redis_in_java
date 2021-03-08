@@ -1,8 +1,9 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
 import redis.clients.jedis.Jedis;
+
+
 
 
 
@@ -25,9 +26,11 @@ public class Main
 
     private static void load() throws FileNotFoundException
     {
+        // open csv file
         in = new Scanner(new File("./NYSE_20210301.csv"));
 
 
+        // read values
         String[] holdLine;
         while (in.hasNextLine())
         {
@@ -39,6 +42,7 @@ public class Main
 
     public static void main(String[] args) 
     {
+        // load csv file in date base
         try { load(); }
         catch (FileNotFoundException e) 
         {
