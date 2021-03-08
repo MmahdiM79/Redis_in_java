@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import redis.clients.jedis.Jedis;
 
 
@@ -11,9 +15,32 @@ public class Main
     private static Jedis db = new Jedis("localhost");
 
 
-    
+
+
+
+            /*  Methods  */
+
+    private static void load() throws FileNotFoundException
+    {
+        Scanner in = new Scanner(new File("./NYSE_20210301.csv"));
+
+
+        String[] holdLine;
+        while (in.hasNextLine())
+        {
+            holdLine = in.nextLine().split(",");
+            db.set(holdLine[0], holdLine[1]);
+        }
+    }
+
+
     public static void main(String[] args) 
     {
-        
+        try { load(); }
+        catch (FileNotFoundException e) 
+        {
+            System.out.println("\ncan not find the NYSE_20210301 file!\n");
+            return;
+        }
     }
 }
