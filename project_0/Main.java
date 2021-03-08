@@ -6,7 +6,13 @@ import redis.clients.jedis.Jedis;
 
 
 
-
+/**
+ * simple usage of redis and jedis library
+ * 
+ * 
+ * @author Mohammad Mahdi Malmasi
+ * @version 0.1.0
+ */
 public class Main 
 {
 
