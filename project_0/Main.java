@@ -14,6 +14,9 @@ public class Main
     // Data Base
     private static Jedis db = new Jedis("localhost");
 
+    // inputs
+    private static Scanner in;
+
 
 
 
@@ -22,7 +25,7 @@ public class Main
 
     private static void load() throws FileNotFoundException
     {
-        Scanner in = new Scanner(new File("./NYSE_20210301.csv"));
+        in = new Scanner(new File("./NYSE_20210301.csv"));
 
 
         String[] holdLine;
@@ -42,5 +45,6 @@ public class Main
             System.out.println("\ncan not find the NYSE_20210301 file!\n");
             return;
         }
+
     }
 }
