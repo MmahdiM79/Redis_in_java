@@ -87,7 +87,17 @@ public class Main
 
                 break;
 
+
                 case "update":
+
+                    if (db.get(command[1]) == null)
+                        System.out.println("false\n");
+                    else
+                    {
+                        db.set(command[1], command[2]);
+                        System.out.println("true\n");
+                    }
+
                 break;
 
                 case "delete":
