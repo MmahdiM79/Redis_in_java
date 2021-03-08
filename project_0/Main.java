@@ -53,5 +53,22 @@ public class Main
             return;
         }
 
+
+        // set scanner
+        in = new Scanner(System.in);
+
+        // hold the client command
+        String[] command;
+
+        // read client commands
+        while (true)
+        {
+            command = in.nextLine().split(" ");
+
+            switch (command[0])
+            {
+                
+            }
+        }
     }
 }
