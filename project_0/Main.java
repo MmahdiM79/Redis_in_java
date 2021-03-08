@@ -24,6 +24,9 @@ public class Main
 
             /*  Methods  */
 
+    /**
+     * This method loads the 'NYSE_20210301.csv' file in data base
+     */
     private static void load() throws FileNotFoundException
     {
         // open csv file
