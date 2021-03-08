@@ -101,6 +101,15 @@ public class Main
                 break;
 
                 case "delete":
+
+                    if (db.get(command[1]) == null)
+                        System.out.println("false\n");
+                    else
+                    {
+                        db.del(command[1]);
+                        System.out.println("true\n");
+                    }
+                
                 break;
 
                 
