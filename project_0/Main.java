@@ -93,6 +93,10 @@ public class Main
                 case "delete":
                 break;
 
+                
+                case "end":
+                    return;
+
                 default:
                     System.out.println("\nundefined command!\n");
             }
